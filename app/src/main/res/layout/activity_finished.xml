@@ -9,4 +9,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="chrisbohn.com.choosy.Finished">
 
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/congratulations_you_apos_re_done"
+            android:id="@+id/textView4" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_other_photos"
+            android:id="@+id/button2"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/finishedimage" />
+
+    </LinearLayout>
 </RelativeLayout>

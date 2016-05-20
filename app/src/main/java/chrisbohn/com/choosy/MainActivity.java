@@ -9,14 +9,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import java.util.LinkedList;
 import java.util.Queue;
-import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "CHOOSY";
-    private static final int PICK_IMAGE = 100;
-    private static Queue<Uri> images = new LinkedList<Uri>();
-    private static Uri[] comparison = new Uri[2];
+    public static Uri best = null;
+    public static final int PICK_IMAGE = 100;
+    public static Queue<Uri> images = new LinkedList<>();
+    public static Uri[] comparison = new Uri[2];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
                     comparison[1] = images.remove();
                     imgButton2.setImageURI(comparison[1]);
                 }
+                else {
+                    best = comparison[0];
+                    startActivity(new Intent(MainActivity.this, Finished.class));
+                }
             }
         });
         imgButton2.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
                 if(!images.isEmpty()) {
                     comparison[0] = images.remove();
                     imgButton1.setImageURI(comparison[0]);
+                }
+                else {
+                    best = comparison[1];
+                    startActivity(new Intent(MainActivity.this, Finished.class));
                 }
             }
         });

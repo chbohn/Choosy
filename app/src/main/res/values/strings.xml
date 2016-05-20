@@ -6,4 +6,8 @@
     <string name="add_photos">Add photo</string>
     <string name="image_1">Image 1</string>
     <string name="image_2">Image 2</string>
+    <string name="finishedimage">FinishedImage</string>
+    <string name="congratulations_you_apos_re_done">Congratulations, you\'re done!</string>
+    <string name="delete_other_photos">Share Photo</string>
+    <string name="restart">Restart</string>
 </resources>
